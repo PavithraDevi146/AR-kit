@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign In - Augmented Reality Explorer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:url(https://www.daacap.com/wp-content/uploads/2020/04/AdobeStock_279658052-2880x1800.jpg) ;
+    }
+    .signin-container {
+      margin-top: 100px;
+    }
+    .signin-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px #000;
+    }
+  </style>
+  <script>
+    function validateSignIn() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+      } else {
+        alert("Sign-in successful!");
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div class="container signin-container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 signin-box">
+      <h2 class="text-center">Sign In</h2>
+      <form onsubmit="event.preventDefault(); validateSignIn();">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </div>
+      </form>
+      <div class="text-center">
+        <p>Already have an account? <a href="login1.html">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

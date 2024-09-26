@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login - Augmented Reality Explorer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:url(https://www.daacap.com/wp-content/uploads/2020/04/AdobeStock_279658052-2880x1800.jpg) ;
+    }
+    .login-container {
+      margin-top: 100px;
+    }
+    .login-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px #000;
+    }
+  </style>
+  <script>
+    function validateLogin() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      if (email === "user@example.com" && password === "password123") {
+        alert("Login successful!");
+      } else {
+        alert("Invalid email or password. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 login-box">
+      <h2 class="text-center">Login</h2>
+      <form onsubmit="event.preventDefault(); validateLogin();">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+      <div class="text-center">
+        <p>Don't have an account? <a href="signin.html">Sign In</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
